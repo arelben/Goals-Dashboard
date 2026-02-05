@@ -37,12 +37,16 @@ class SupabaseService:
         """Elimina un objetivo por su ID."""
         self.client.table("goals").delete().eq("id", str(goal_id)).execute()
 
-    def update_goal_status(self, goal_id: UUID, status: str) -> Goal:
-        """Actualiza el estado de un objetivo."""
-        response = self.client.table("goals").update({"status": status}).eq("id", str(goal_id)).execute()
+    def update_goal(self, goal_id: UUID, data: dict) -> Goal:
+        """Actualiza un objetivo existente."""
+        response = self.client.table("goals").update(data).eq("id", str(goal_id)).execute()
         if response.data:
             return Goal(**response.data[0])
         raise Exception("Error updating goal")
+
+    def update_goal_status(self, goal_id: UUID, status: str) -> Goal:
+        """Actualiza el estado de un objetivo."""
+        return self.update_goal(goal_id, {"status": status})
 
     # --- Milestones ---
 
@@ -53,3 +57,14 @@ class SupabaseService:
         if response.data:
             return Milestone(**response.data[0])
         raise Exception("Error creating milestone")
+
+    def toggle_milestone(self, milestone_id: UUID, is_completed: bool) -> Milestone:
+        """Marca un hito como completado o pendiente."""
+        response = self.client.table("milestones").update({"is_completed": is_completed}).eq("id", str(milestone_id)).execute()
+        if response.data:
+            return Milestone(**response.data[0])
+        raise Exception("Error toggling milestone")
+
+    def delete_milestone(self, milestone_id: UUID) -> None:
+        """Elimina un hito."""
+        self.client.table("milestones").delete().eq("id", str(milestone_id)).execute()
