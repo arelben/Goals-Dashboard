@@ -1,3 +1,7 @@
 reflex
 supabase
 python-dotenv
+pytest
+pytest-mock
+
+reflex==0.8.26
