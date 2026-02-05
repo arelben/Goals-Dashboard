@@ -1,6 +1,8 @@
 ---
 name: mastering-python-skill
-description: Modern Python coaching covering language foundations through advanced production patterns. Use when asked to "write Python code", "explain Python concepts", "set up a Python project", "configure Poetry or PDM", "write pytest tests", "create a FastAPI endpoint", "run uvicorn server", "configure alembic migrations", "set up logging", "process data with pandas", or "debug Python errors". Triggers on "Python best practices", "type hints", "async Python", "packaging", "virtual environments", "Pydantic validation", "dependency injection", "SQLAlchemy models".
+description: >
+  Modern Python coaching covering language foundations through advanced production patterns. Use when asked to "write Python code", "explain Python concepts", "set up a Python project", "configure Poetry or PDM", "write pytest tests", "create a FastAPI endpoint", "run uvicorn server", "configure alembic migrations", "set up logging", "process data with pandas", or "debug Python errors". Triggers on "Python best practices", "type hints", "async Python", "packaging", "virtual environments", "Pydantic validation", "dependency injection", "SQLAlchemy models".
+  Trigger: When user asks to write Python code, explain Python concepts, set up a Python project, configure Poetry or PDM, write pytest tests, create a FastAPI endpoint, run uvicorn server, configure alembic migrations, set up logging, process data with pandas, or debug Python errors.
 allowed-tools:
   - Read
   - Write

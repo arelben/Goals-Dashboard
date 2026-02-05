@@ -26,3 +26,7 @@ env/
 # Brain / Task tracking (Internal)
 .gemini/
 brain/
+
+# Coverage
+.coverage*
+htmlcov/

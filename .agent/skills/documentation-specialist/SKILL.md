@@ -1,11 +1,11 @@
 ---
 name: "documentation-specialist"
-description: |
+description: >
   This skill should be used when creating professional software documentation (SRS, PRD, OpenAPI,
   user manuals, tutorials, runbooks) from templates (greenfield) or reverse-engineering documentation
   from existing code like Spring Boot or FastAPI (brownfield). Also handles documentation audits/reviews,
   format conversion (Markdown, DOCX, PDF), and diagram generation (C4, Mermaid, PlantUML, ER, sequence).
-  Use when asked to "create documentation", "document my code", "write SRS", "generate PRD", or "documentation specialist".
+  Trigger: When user asks to use "create documentation", "document my code", "write SRS", "generate PRD", or "documentation specialist".
 metadata:
   author: arelben
   scope: [root]

@@ -31,3 +31,5 @@ def goal_card(goal: dict) -> rx.Component:
         border_radius="lg",
     )
 ```
+Documentation: https://reflex.dev/docs/getting-started/introduction/
+Component Library: https://reflex.dev/docs/library/

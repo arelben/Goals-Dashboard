@@ -14,7 +14,53 @@ class State(rx.State):
     error_message: str = ""
     is_loading: bool = False
     show_registration: bool = False
+    # ... existing state ...
     goals: list[Goal] = []
+    is_add_modal_open: bool = False
+
+    def toggle_add_modal(self):
+        self.is_add_modal_open = not self.is_add_modal_open
+
+    def add_goal(self, form_data: dict):
+        if not self.user_id:
+            return
+            
+        title = form_data.get("title")
+        description = form_data.get("description")
+        deadline = form_data.get("deadline")
+        
+        if not title:
+            return
+            
+        try:
+            service = get_service()
+            from models.goal import GoalCreate
+            from uuid import UUID
+            from datetime import datetime
+            
+            # Simple date parsing
+            deadline_date = None
+            if deadline:
+                try:
+                    deadline_date = datetime.strptime(deadline, "%Y-%m-%d")
+                except ValueError:
+                    pass
+
+            goal_create = GoalCreate(
+                title=title,
+                description=description,
+                deadline=deadline_date,
+                user_id=UUID(self.user_id)
+            )
+            
+            service.create_goal(goal_create)
+            
+            # Refresh and close
+            self.load_goals()
+            self.is_add_modal_open = False
+            
+        except Exception as e:
+            self.error_message = f"Failed to add goal: {str(e)}"
 
     def load_goals(self):
         """Fetch goals for the current user."""

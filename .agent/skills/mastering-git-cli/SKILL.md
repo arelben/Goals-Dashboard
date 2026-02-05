@@ -1,6 +1,8 @@
 ---
 name: mastering-git-cli
-description: Git CLI operations, workflows, and automation for modern development (2025). Use when working with repositories, commits, branches, merging, rebasing, worktrees, submodules, or multi-repo architectures. Includes parallel agent workflow patterns, merge strategies, conflict resolution, and large repo optimization. Triggers on git commands, version control, merge conflicts, worktree setup, submodule management, repository troubleshooting, branch strategy, rebase operations, cherry-pick decisions, and CI/CD git integration.
+description: >
+  Git CLI operations, workflows, and automation for modern development (2025). Use when working with repositories, commits, branches, merging, rebasing, worktrees, submodules, or multi-repo architectures. Includes parallel agent workflow patterns, merge strategies, conflict resolution, and large repo optimization. Triggers on git commands, version control, merge conflicts, worktree setup, submodule management, repository troubleshooting, branch strategy, rebase operations, cherry-pick decisions, and CI/CD git integration.
+  Trigger: When user asks to use "git" commands, "version control", "merge conflicts", "worktree setup", "submodule management", "repository troubleshooting", "branch strategy", "rebase operations", "cherry-pick decisions", and "CI/CD git integration".
 metadata:
   author: arelben
   scope: [root]

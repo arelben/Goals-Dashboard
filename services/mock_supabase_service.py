@@ -142,7 +142,7 @@ class MockSupabaseService(BaseService):
             user_id=UUID(self._current_user_id),
             created_at=datetime.now(),
             updated_at=datetime.now(),
-            **goal.dict()
+            **goal.dict(exclude={"user_id"})
         )
         self.goals[str(new_id)] = new_goal
         return new_goal
@@ -178,7 +178,6 @@ class MockSupabaseService(BaseService):
         new_milestone = Milestone(
             id=new_id,
             created_at=datetime.now(),
-            is_completed=False,
             **milestone.dict()
         )
         self.milestones[str(new_id)] = new_milestone

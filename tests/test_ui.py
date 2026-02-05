@@ -113,3 +113,34 @@ def test_load_goals():
         assert len(state.goals) == 1
         assert state.goals[0].title == "Test Goal"
         assert state.is_loading is False
+
+def test_add_goal():
+    """Test adding a goal."""
+    from models.goal import GoalCreate
+    from uuid import uuid4
+    
+    state = State()
+    state.user_id = str(uuid4())
+    
+    with patch("goals_dashboard.goals_dashboard.get_service") as mock_get_service:
+        mock_service = mock_get_service.return_value
+        
+        # Test data
+        form_data = {
+            "title": "New Goal",
+            "description": "Desc",
+            "deadline": "2025-12-31"
+        }
+        
+        state.add_goal(form_data)
+        
+        # Verify service called
+        mock_service.create_goal.assert_called_once()
+        call_args = mock_service.create_goal.call_args[0][0]
+        assert isinstance(call_args, GoalCreate)
+        assert call_args.title == "New Goal"
+        assert str(call_args.user_id) == state.user_id
+        
+        # Verify refresh called (mock_service.get_goals should be called inside load_goals)
+        mock_service.get_goals.assert_called()
+        assert state.is_add_modal_open is False
