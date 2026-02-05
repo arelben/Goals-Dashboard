@@ -58,8 +58,8 @@ graph TB
 
 ### 1. Reflex Web Application
 A unified Python framework for building full-stack web apps.
-- **UI / Pages**: Declarative Python components that compile to React.
-- **State Management**: Handles user sessions, global variables, and event logic.
+- **UI / Pages**: Declarative Python components that compile to React. Implements a **Glassmorphism Design System** with custom dark mode tokens.
+- **State Management**: Handles user sessions, global variables, and event logic (e.g., navigation and auth transitions).
 - **Service Layer**: Abstraction for interacting with external APIs and databases.
 
 ### 2. Supabase

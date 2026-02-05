@@ -8,6 +8,28 @@ Un dashboard premium para la gestión de objetivos personales, construido con **
 - **Estilo**: Glassmorphism / Dark Mode Premium
 - **Infraestructura de Agente**: Inspirada en Prowler (TDD + Skills)
 
+## 🏁 Estado del Desarrollo
+- **Fase 1-3**: Completadas (Entorno, Modelado de Datos, Servicio de Base de Datos).
+- **Fase 4**: Completada (Interfaz UI Premium, Layout con Sidebar, Lógica de Navegación).
+- **Fase 5**: En progreso (Autenticación real con Supabase).
+
+## 🧪 Calidad e Integridad (TDD)
+Este proyecto sigue una metodología estrictamente dirigida por pruebas (**Test-Driven Development**):
+
+- **Tests de Servicio**: Validación de la lógica de negocio y conexión (Mocks).
+- **Tests de UI**: Verificación de estados de navegación y renderizado de componentes.
+
+Para ejecutar las pruebas:
+```bash
+./venv/bin/pytest                     # Todos los tests
+./venv/bin/pytest tests/test_ui.py    # Solo tests de interfaz
+```
+
+## 🎨 Sistema de Diseño
+- **Estilo**: Premium Dark Mode con efectos de **Glassmorphism** (`backdrop-filter: blur(15px)`).
+- **Color de Acento**: Violeta Eléctrico (`#8A2BE2`).
+- **Componentes**: Sidebar persistente, estados de navegación reactivos.
+
 ## 📐 Arquitectura de Datos
 
 ### 1. Esquema SQL (Supabase)
@@ -51,4 +73,4 @@ reflex run
 ```
 
 ---
-*Este proyecto utiliza un sistema de Agente Inteligente configurado en `agents.md`.*
+*Este proyecto utiliza un sistema de Agente Inteligente configurado en `AGENTS.md`.*
