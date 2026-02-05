@@ -1,0 +1,8 @@
+installed_at: '2026-02-05T00:13:36+00:00'
+skill_id: SpillwaveSolutions_document-specialist-skill/documentation-specialist
+git_repo: https://github.com/SpillwaveSolutions/document-specialist-skill.git
+skill_path: /main/SKILL.md
+git_sha: 4d50d302b9f40e8eafec72d78a86676cdd9511ac
+skilz_version: 1.10.0
+install_mode: copy
+canonical_path: null

@@ -1,0 +1,8 @@
+installed_at: '2026-02-05T00:24:18+00:00'
+skill_id: git/mastering-postgresql
+git_repo: https://github.com/SpillwaveSolutions/mastering-postgresql-agent-skill
+skill_path: /private/var/folders/_5/nsftfk410f334zvjx7xwx13m0000gn/T/skilz-git-jk7zhew6/mastering-postgresql
+git_sha: 2a713e98b0a4618c51605da401f2cfe5e4b8e3ea
+skilz_version: 1.10.0
+install_mode: copy
+canonical_path: null

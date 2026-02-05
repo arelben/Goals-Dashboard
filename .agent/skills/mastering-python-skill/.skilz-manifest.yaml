@@ -1,0 +1,8 @@
+installed_at: '2026-02-05T00:25:14+00:00'
+skill_id: SpillwaveSolutions/mastering-python-skill-plugin/mastering-python-skill
+git_repo: https://github.com/SpillwaveSolutions/mastering-python-skill-plugin.git
+skill_path: /main/skills/mastering-python-skill/SKILL.md
+git_sha: a03ac1e39f65f074985e4f9ea62d9129779b4ba0
+skilz_version: 1.10.0
+install_mode: copy
+canonical_path: null

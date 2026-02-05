@@ -1,0 +1,8 @@
+installed_at: '2026-02-04T22:42:56+00:00'
+skill_id: git/mastering-git-cli
+git_repo: https://github.com/SpillwaveSolutions/mastering-git-cli-agent-skill
+skill_path: /private/var/folders/_5/nsftfk410f334zvjx7xwx13m0000gn/T/skilz-git-dw82ka86/mastering-git-cli
+git_sha: 95c0d49d8567bc02c94c82cf5f9da3f169f87c4e
+skilz_version: 1.10.0
+install_mode: copy
+canonical_path: null
